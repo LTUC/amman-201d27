@@ -48,15 +48,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    let sum = a + b + c;
-    let multiply = a * b * c;
-    let msg1 = a + " and " + b + " and " + c + " sum to " + sum + ".";
-    let msg2 = "The product of " + a + " and " + b + " and " + c + " is " + multiply + ".";
-    return [sum , multiply , msg1 , msg2];
+    
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+// testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -123,10 +119,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let multiply = 1;
+  for (let i = 0 ; i < testDynamicArray.length ; i++){
+    multiply *= testDynamicArray[i];
+  }
+  let msg = 'The numbers ' + testDynamicArray + ' have a product of ' + multiply + '.';
+  return [multiply , msg];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
